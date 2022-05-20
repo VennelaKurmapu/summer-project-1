@@ -3,8 +3,9 @@ import threading
 x = 0
 def print_num(i):
     print(i)
-
 endtime = time.time() + 1
+# The following while condition make's sure that the program executes for exactly one second
+
 while time.time() < endtime:
     t1 = threading.Thread(target = print_num, args=[x])
     x = x + 1
